@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Bot</title>
+</head>
+<body>
+    <h2>Controle do Bot</h2>
+    <form method="POST">
+        <label>Mensagem:</label><br>
+        <textarea name="mensagem" rows="4" cols="50">{{ data['mensagem'] }}</textarea><br><br>
+
+        <label>Tempo entre envios (min):</label><br>
+        <input type="number" name="tempo_envio" value="{{ data['tempo_envio'] }}"><br><br>
+
+        <label>Validade (min):</label><br>
+        <input type="number" name="validade" value="{{ data['validade'] }}"><br><br>
+
+        <label>Estratégia:</label><br>
+        <input type="text" name="estrategia" value="{{ data['estrategia'] }}"><br><br>
+
+        <label>Bot Ativo:</label>
+        <input type="checkbox" name="bot_ativo" {% if data['bot_ativo'] %}checked{% endif %}><br><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+    <br>
+    <a href="/logout">Sair</a>
+</body>
+</html>
