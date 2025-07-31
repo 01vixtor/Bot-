@@ -1,0 +1,7 @@
+{
+    "mensagem": "Exemplo de mensagem de sinal 🔥",
+    "tempo_envio": 30,
+    "validade": 10,
+    "estrategia": "Estratégia padrão",
+    "bot_ativo": false
+}
