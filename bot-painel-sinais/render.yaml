@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: painel-web
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - fromGroup: bot-env
+    rootDir: web
+
+  - type: worker
+    name: bot-worker
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - fromGroup: bot-env
+    rootDir: worker
