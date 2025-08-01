@@ -9,7 +9,7 @@ load_dotenv()
 
 TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("GROUP_ID")
-DATA_FILE = 'database.json'
+DATA_FILE = os.path.join(os.path.dirname(__file__), '..', 'web', 'database.json')
 
 bot = Bot(token=TOKEN)
 
